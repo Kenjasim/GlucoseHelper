@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "932885020216",
+    "firebase_url": "https://glucose-helper-2572c.firebaseio.com",
+    "project_id": "glucose-helper-2572c",
+    "storage_bucket": "glucose-helper-2572c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:932885020216:android:d37bc3afc5de1827",
+        "android_client_info": {
+          "package_name": "com.kenjasim.glucosehelper"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "932885020216-d6v4kabmhu0gjc8orsdo8bj4uee544l7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.kenjasim.glucosehelper",
+            "certificate_hash": "49ff549326d49e379ae0a15b0d04f08f9ebf11d9"
+          }
+        },
+        {
+          "client_id": "932885020216-9vglpctlmdhvc021844kvr9qtnnupv0h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB_owmiv-vbEXTrU23WGbRaeNzZ0iP_-Ls"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "932885020216-9vglpctlmdhvc021844kvr9qtnnupv0h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_settings"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        tools:context="com.kenjasim.glucosehelper.SettingsActivity">
+
+        <TextView
+            android:text="Account Settings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/textView"
+            android:textColor="@color/colorAccent" />
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"/>
+
+        <ListView
+            android:id="@+id/accountLV"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textView"
+            android:layout_marginTop="12dp" />
+        <Button
+            android:text="Delete Account"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/DeleteAccount"
+            android:layout_below="@+id/accountLV"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:background="@android:color/holo_red_light"
+            android:textColor="@color/textLight"/>
+
+        <TextView
+            android:text="Diabetes Settings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView2"
+            android:textColor="@color/colorAccent"
+            android:layout_below="@+id/DeleteAccount"
+            android:layout_alignParentStart="true" />
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_below="@+id/textView2"
+            android:id="@+id/space" />
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView2"
+            android:layout_toEndOf="@+id/space"
+            android:id="@+id/textInputLayout">
+
+            <EditText
+                android:id="@+id/carbRatioET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/insSensET"
+                android:layout_weight="1"
+                android:hint="Carb Ratio" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textInputLayout"
+            android:layout_toEndOf="@+id/space"
+            android:id="@+id/textInputLayout2">
+
+            <EditText
+                android:id="@+id/insSensET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/carbRatioET"
+                android:layout_weight="1"
+                android:hint="Insulin Sensitivity" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textInputLayout2"
+            android:id="@+id/textInputLayout3">
+
+            <EditText
+                android:id="@+id/idealET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textInputLayout"
+                android:layout_marginTop="8dp"
+                android:layout_toEndOf="@+id/space"
+                android:layout_weight="1"
+                android:hint="Ideal Blood Glucose Levels" />
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:id="@+id/saveDataButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            android:background="@color/colorAccent"
+            android:textColor="@color/textLight"
+            android:layout_below="@+id/textInputLayout3"
+            android:layout_toEndOf="@+id/space"
+            android:layout_marginTop="8dp" />
+
+
+    </RelativeLayout>
+</ScrollView>

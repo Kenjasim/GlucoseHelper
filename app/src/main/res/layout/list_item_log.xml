@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/dateTime"
+        android:textColor="@color/textDark"
+        android:textSize="14dp"
+        android:textStyle="bold"/>
+    <!--This declares the text view that will show the date and time-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bgReading"
+        android:textColor="@color/textDark"
+        android:textSize="14dp"/>
+    <!--This declares the text view that will show the blood readinge-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/carbohydrate"
+        android:textColor="@color/textDark"
+        android:textSize="14dp"/>
+    <!--This declares the text view that will show the carbs-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/insulin"
+        android:textColor="@color/textDark"
+        android:textSize="14dp"/>
+    <!--This declares the text view that will show the Insulin-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/notes"
+        android:textColor="@color/textDark"
+        android:textSize="14dp"/>
+    <!--This declares the text view that will show the notes-->
+
+</LinearLayout>
+
+
+
