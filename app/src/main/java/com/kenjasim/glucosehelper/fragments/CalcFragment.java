@@ -63,26 +63,12 @@ public class CalcFragment extends Fragment  {
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             public void onItemSelected(AdapterView<?> parent, View view,
                                        int position, long id) {
-                String item = parent.getItemAtPosition(position).toString();
 
                 if (position == 0){
                     calcButton.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
-                            Float answer = Float.parseFloat(editText.getText().toString());
-                            String answerStr = answer.toString();
-                            if (TextUtils.isEmpty(answerStr)){
-                                editText.setError("Enter Something");
-                            }
-                            Float carb = Float.parseFloat(carbratio);
-                            Float carbFloat = (1 / carb);
-
-                            Float number = answer * carbFloat;
-                            String numberStr = number.toString();
-
-                            answerET.setText(numberStr);
-
-                            //This calculates the amount for the carbs and setting the text
+                            calcCarbs();
                         }
                     });
 
@@ -93,24 +79,7 @@ public class CalcFragment extends Fragment  {
                     calcButton.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
-                            Float answer = Float.parseFloat(editText.getText().toString());
-                            String answerStr = answer.toString();
-                            if (TextUtils.isEmpty(answerStr)){
-                                editText.setError("Enter Something");
-                            }
-                            Float BG = Float.parseFloat(bgRatio);
-                            Float BGFloat = (1 / BG);
-                            Float idealFloat = Float.parseFloat(ideallevel);
-
-                            Float idealtakeactual = (answer - idealFloat);
-                            Float BSAns = (idealtakeactual * BGFloat);
-
-                            answerET.setText(BSAns.toString());
-
-                            //This calculates the amount for the blood sugars and setting the text
-
-
-
+                            calcBloodSugar();
                         }
                     });
 
@@ -195,5 +164,42 @@ public class CalcFragment extends Fragment  {
             }
         });
 
+    }
+
+    private void calcBloodSugar()
+    {
+        Float answer = Float.parseFloat(editText.getText().toString());
+        String answerStr = answer.toString();
+        if (TextUtils.isEmpty(answerStr)){
+            editText.setError("Enter Something");
+        }
+        Float BG = Float.parseFloat(bgRatio);
+        Float BGFloat = (1 / BG);
+        Float idealFloat = Float.parseFloat(ideallevel);
+
+        Float idealtakeactual = (answer - idealFloat);
+        Float BSAns = (idealtakeactual * BGFloat);
+
+        answerET.setText(BSAns.toString());
+
+        //This calculates the amount for the blood sugars and setting the text
+    }
+
+    private void calcCarbs()
+    {
+        Float answer = Float.parseFloat(editText.getText().toString());
+        String answerStr = answer.toString();
+        if (TextUtils.isEmpty(answerStr)){
+            editText.setError("Enter Something");
+        }
+        Float carb = Float.parseFloat(carbratio);
+        Float carbFloat = (1 / carb);
+
+        Float number = answer * carbFloat;
+        String numberStr = number.toString();
+
+        answerET.setText(numberStr);
+
+        //This calculates the amount for the carbs and setting the text
     }
 }
